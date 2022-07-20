@@ -116,10 +116,13 @@ body.locked {
 }
 
 .navbar {
+  position: relative;
+  z-index: 100;
   width: 100%;
   height: 80px;
   padding: 0 80px 0 64px;
   background-color: #000;
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -136,6 +139,7 @@ body.locked {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  justify-self: start;
 }
 
 .menu {
@@ -148,6 +152,7 @@ body.locked {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  justify-self: center;
   gap: 40px;
 }
 
@@ -205,6 +210,99 @@ body.locked {
   cursor: pointer;
 }
 
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 872px;
+  width: 100%;
+  padding: 144px 64px 0px 64px;
+  background-color: #FCDA28;
+  position: relative;
+}
+
+.main__description {
+  position: relative;
+  z-index: 20;
+}
+
+.main__images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  z-index: 10;
+  width: 712px;
+  height: 842px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 144px;
+  line-height: 152px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #FFFFFF;
+}
+
+.title__descr {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #000000;
+  margin-top: 24px;
+}
+
+.subtitle {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 43px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #000000;
+  margin-top: 120px;
+}
+
+.subtitle__descr {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #000000;
+  margin-top: 16px;
+}
+
+.vitamins {
+  position: absolute;
+  right: 0px;
+  top: -39px;
+}
+
 @media (max-width: 1449.98px) {
   .container {
     max-width: 1200px;
@@ -215,9 +313,41 @@ body.locked {
   .menu__item {
     font-size: 13px;
   }
+
+  .title {
+    font-size: 108px;
+    line-height: 120px;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .main__images {
+    width: 100%;
+    padding: 0 64px;
+  }
+
+  .main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .vitamins {
+    width: 100%;
+    top: -90px;
+  }
 }
 
 @media screen and (max-width: 1159.98px) {
+  .navbar {
+    gap: 36px;
+    padding: 0 20px 0 16px;
+  }
+
   .menu {
     position: fixed;
     background: #131418;
@@ -252,8 +382,18 @@ body.locked {
             animation: fade 0.1s linear;
   }
 
+  .basket {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-self: end;
+  }
+
   .burger {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-self: end;
     position: relative;
     height: 20px;
     width: 30px;
@@ -336,6 +476,17 @@ body.locked {
 @media (max-width: 991.98px) {
   .container {
     max-width: 970px;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  .title {
+    font-size: 79px;
+    line-height: 83px;
+  }
+
+  .subtitle {
+    margin-top: 62px;
   }
 }
 
