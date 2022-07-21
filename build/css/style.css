@@ -566,7 +566,7 @@ body.locked {
   }
 
   .vitamins {
-    left: 55%;
+    left: 53%;
   }
 }
 
@@ -587,14 +587,15 @@ body.locked {
   }
 
   .vitamins {
-    left: 518px;
+    left: 482px;
+    width: 50%;
   }
 }
 
 @media screen and (max-width: 1200px) {
   .vitamins {
     left: 571px;
-    top: 400.29px;
+    top: 334.29px;
     width: 40%;
   }
 }

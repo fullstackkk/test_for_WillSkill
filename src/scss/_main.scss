@@ -1,0 +1,115 @@
+.main {
+    display: flex;
+    width: 100%;
+    padding: 176px 64px 96px 64px ;
+    background-color: #FCDA28;
+    position: relative;
+    &__description {
+        position: relative;
+        z-index: 20;
+    }    
+    @media screen and (min-width: 1500px){    
+            justify-content: center;    
+    }
+    @media screen and (max-width: 1160px){        
+            flex-direction: column;
+            align-items: center;        
+    }
+}
+
+.title {
+    font-weight: 700;
+    font-size: 144px;
+    line-height: 152px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    @media screen and (max-width: 1400px){       
+           font-size: 108px;
+           line-height: 120px;   
+    }
+    @media screen and (max-width: $breakpoint992){        
+            font-size: 79px;
+            line-height: 83px; 
+            justify-content: center;
+            text-align: center;  
+    }
+    @media screen and (max-width: $breakpoint768){        
+            font-size: 62px;
+            line-height: 62px;   
+    }
+    @media screen and (max-width: $breakpoint480){        
+            font-size: 39px;
+            line-height: 39px;   
+    }
+    &__descr {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        display: flex;
+        align-items: center;
+        color: #000000;
+        margin-top: 24px;
+        @media screen and (max-width: $breakpoint992){   
+            justify-content: center;
+            text-align: center;  
+        }
+    }
+}
+
+.subtitle {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    margin-top: 120px;
+    @media screen and (max-width: $breakpoint992){       
+            margin-top: 62px;  
+            text-align: center;
+            justify-content: center;
+    }
+    &__descr {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        display: flex;
+        align-items: center;
+        color: #000000;
+        margin-top: 16px;
+        @media screen and (max-width: $breakpoint992){       
+            margin-top: 62px;
+            justify-content: center;
+            text-align: center;  
+        }   
+    }
+}
+
+
+.vitamins {
+    position: absolute;
+    left: 664px;
+    top: 132.29px;
+    @media screen and (min-width: 1500px){ 
+        left: 53%; 
+    }
+    @media screen and (max-width: 1400px){       
+            left: 482px; 
+            width: 50%;  
+    }
+    @media screen and (max-width: 1200px){       
+            left: 571px;
+            top: 334.29px;
+            width: 40%;    
+    }   
+    @media screen and (max-width: $breakpoint992){       
+            position: static;
+            margin-top: 20px;   
+    }
+    @media screen and (max-width: $breakpoint480){       
+            width: 100%;  
+    }
+}
+
+

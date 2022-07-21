@@ -1,0 +1,10 @@
+// Global SCSS-files imports
+@import './vars';
+@import './reset';
+@import './fonts';
+@import './global';
+
+// Sections or Pages SCSS-files imports
+@import './navigation';
+@import './main';
+@import './hero';

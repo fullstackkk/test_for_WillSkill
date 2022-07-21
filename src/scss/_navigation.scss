@@ -1,0 +1,171 @@
+// Header
+.navbar {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    height: 80px;
+    padding: 0 80px 0 64px;
+    background-color: #000;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 76px;
+}
+.logo {
+    display: flex;
+    justify-self: start;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-self: center;
+    gap: 40px;
+		&__item {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 24px;
+            display: flex;
+            align-items: center;
+            color: #FFFFFF;
+		}
+		&__item-link {
+            color: #FFFFFF;
+            &:hover{                
+                color: $primaryHoverColor; 
+            }
+		}
+        @media screen and (max-width: 1400px){
+            &__item{                
+                font-size: 13px;
+            }
+        }
+}
+.basket {
+    position: relative;
+    display: flex;
+    @media screen and (max-width: $breakpoint992){
+        justify-self: end;
+    }
+}
+.basket::after{
+    position: absolute;
+    top: 21px;
+    left: 24px;
+    content: '1';
+    width: 16px;
+    height: 16px;
+    background: #FCB500;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    border-radius: 100%;
+}
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+// Burger menu styles
+@media screen and (max-width: $breakpoint1160) {
+    .navbar {
+        gap: 36px;
+        padding: 0 20px 0 16px;
+    }
+    .menu {
+        position: fixed;
+        background: #131418;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 100vw;
+        display: none;
+
+        &.active {
+            display: flex;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            width: 100vw;
+            flex-direction: column;
+            pointer-events: all;
+            justify-content: center;
+            align-items: center;
+            z-index: 22;
+            animation: fade 0.1s linear;
+        }
+    }
+    .basket{
+        display: flex;
+        justify-self: end;
+    }
+    .burger {
+        display: flex;
+        justify-self: end;
+        position: relative;
+        height: 20px;
+        width: 30px;
+        z-index: 102;
+        cursor: pointer;
+
+        &.active-burger {
+            &:before {
+                background: $burgerActiveColor;
+                transform: rotate(45deg);
+                transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+                top: 8px;
+            }
+
+            &:after {
+                background: $burgerActiveColor;
+                transform: rotate(-45deg);
+                bottom: 10px;
+                transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+            }
+
+            & span {
+                transform: scale(0);
+            }
+        }
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background: $burgerColor;
+            transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+        }
+
+        &:before {
+            top: 0;
+        }
+
+        &::after {
+            bottom: 0;
+        }
+
+        span {
+            position: absolute;
+            top: 9px;
+            right: 0;
+            width: 100%;
+            background: $burgerColor;
+            height: 2px;
+            transform: scale(1);
+            transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+        }
+    }
+    .menu__item {
+        margin-top: 15px;
+    }
+    .menu__item-link {
+        color: white;
+    }
+}
