@@ -1,11 +1,12 @@
 // Container
 .container {
-    max-width: ($containerWidth + $containerPadding) + px;
+    max-width: 1440px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 $containerSidePadding + px;
+    padding: 0 64px;
+    position: relative;
 
-    @media (max-width: $breakpoint1450) {
+    @media (max-width: 1400px) {
         max-width: 1200px;
     }
 
@@ -30,14 +31,4 @@ body {
     font-family: 'Rubik', sans-serif;
 }
 
-// Animations
-// Fade
-@keyframes fade {
-    0% {
-        opacity: 0;
-    }
 
-    100% {
-        opacity: 1;
-    }
-}

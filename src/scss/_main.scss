@@ -1,7 +1,7 @@
 .main {
     display: flex;
     width: 100%;
-    padding: 176px 64px 96px 64px ;
+    padding: 176px 0px 96px 0px ;
     background-color: #FCDA28;
     position: relative;
     &__description {
@@ -24,9 +24,9 @@
     display: flex;
     align-items: center;
     color: #FFFFFF;
-    @media screen and (max-width: 1400px){       
-           font-size: 108px;
-           line-height: 120px;   
+    @media screen and (max-width: 1400px){    
+            font-size: 101px;
+            line-height: 98px;  
     }
     @media screen and (max-width: $breakpoint992){        
             font-size: 79px;
@@ -90,21 +90,22 @@
 .vitamins {
     position: absolute;
     left: 664px;
-    top: 132.29px;
-    @media screen and (min-width: 1500px){ 
-        left: 53%; 
-    }
+    top: -38.71px;
+    max-width: 60%;
+    
     @media screen and (max-width: 1400px){       
-            left: 482px; 
+            left: 532px; 
             width: 50%;  
     }
-    @media screen and (max-width: 1200px){       
-            left: 571px;
-            top: 334.29px;
-            width: 40%;    
+    @media screen and (max-width: 1200px){            
+            left: 566px;
+            top: 90.29px;
+            width: 40%;   
     }   
     @media screen and (max-width: $breakpoint992){       
             position: static;
+            display: block;
+            margin: 0 auto;
             margin-top: 20px;   
     }
     @media screen and (max-width: $breakpoint480){       

@@ -81,10 +81,11 @@ h6 {
 }
 
 .container {
-  max-width: 1240px;
+  max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 64px;
+  position: relative;
 }
 
 body {
@@ -93,26 +94,6 @@ body {
 
 body.locked {
   overflow: hidden;
-}
-
-@-webkit-keyframes fade {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
 }
 
 .navbar {
@@ -218,7 +199,7 @@ body.locked {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  padding: 176px 64px 96px 64px;
+  padding: 176px 0px 96px 0px;
   background-color: #FCDA28;
   position: relative;
 }
@@ -286,7 +267,8 @@ body.locked {
 .vitamins {
   position: absolute;
   left: 664px;
-  top: 132.29px;
+  top: -38.71px;
+  max-width: 60%;
 }
 
 .hero {
@@ -564,13 +546,9 @@ body.locked {
         -ms-flex-pack: center;
             justify-content: center;
   }
-
-  .vitamins {
-    left: 53%;
-  }
 }
 
-@media (max-width: 1449.98px) {
+@media (max-width: 1400px) {
   .container {
     max-width: 1200px;
   }
@@ -582,20 +560,20 @@ body.locked {
   }
 
   .title {
-    font-size: 108px;
-    line-height: 120px;
+    font-size: 101px;
+    line-height: 98px;
   }
 
   .vitamins {
-    left: 482px;
+    left: 532px;
     width: 50%;
   }
 }
 
 @media screen and (max-width: 1200px) {
   .vitamins {
-    left: 571px;
-    top: 334.29px;
+    left: 566px;
+    top: 90.29px;
     width: 40%;
   }
 }
@@ -788,6 +766,8 @@ body.locked {
 
   .vitamins {
     position: static;
+    display: block;
+    margin: 0 auto;
     margin-top: 20px;
   }
 }
